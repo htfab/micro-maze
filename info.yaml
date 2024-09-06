@@ -1,9 +1,9 @@
 # Tiny Tapeout project information
 project:
-  title:        "Tiny Tapeout 8 Micro Test"      # Project title
-  author:       "Uri Shaked"             # Your name
-  discord:      "urish"                         # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
-  description:  "Micro tiles test module"      # One line description of what your project does
+  title:        "Micro Maze (experimental micro tile)"      # Project title
+  author:       "htfab"             # Your name
+  discord:      "h.tamas"                         # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
+  description:  "A simple fixed maze game with 7-segment output"      # One line description of what your project does
   language:     "Verilog" # other examples include SystemVerilog, Amaranth, VHDL, etc
   clock_hz:     0         # Clock frequency in Hz (or 0 if not applicable)
 
@@ -20,24 +20,24 @@ project:
 # The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
 pinout:
   # Inputs
-  ui[0]: "in[0]"
-  ui[1]: "in[1]"
-  ui[2]: "in[2]"
-  ui[3]: "in[3]"
-  ui[4]: "in[4]"
-  ui[5]: "in[5]"
-  ui[6]: "in[6]"
-  ui[7]: "in[7]"
+  ui[0]: "up"
+  ui[1]: "down"
+  ui[2]: "left"
+  ui[3]: "right"
+  ui[4]: ""
+  ui[5]: ""
+  ui[6]: ""
+  ui[7]: ""
 
   # Outputs
-  uo[0]: "output[0] / counter[0]"
-  uo[1]: "output[1] / counter[1]"
-  uo[2]: "output[2] / counter[2]"
-  uo[3]: "output[3] / counter[3]"
-  uo[4]: "output[4] / counter[4]"
-  uo[5]: "output[5] / counter[5]"
-  uo[6]: "output[6] / counter[6]"
-  uo[7]: "output[7] / counter[7]"
+  uo[0]: "maze display"
+  uo[1]: "maze display"
+  uo[2]: "maze display"
+  uo[3]: "maze display"
+  uo[4]: "maze display"
+  uo[5]: "maze display"
+  uo[6]: "finished check"
+  uo[7]: "finished check"
 
   # Bidirectional pins - be be blank, not available for micro tile projects
   uio[0]: ""
