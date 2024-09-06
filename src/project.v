@@ -71,6 +71,6 @@ maze_data i_maze_data(
     .vertical
 );
 
-wire _unused = &{ui_in[7:4}, 1'b0};
+wire _unused = &{ui_in[7:4], 1'b0};
 
 endmodule  // tt_um_factory_test
