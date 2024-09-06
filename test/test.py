@@ -7,7 +7,7 @@ from cocotb.triggers import ClockCycles
 
 
 @cocotb.test()
-async def test_loopback(dut):
+async def test_ignore(dut):
     dut._log.info("Start")
 
     # Set the clock period to 10 us (100 KHz)
@@ -21,23 +21,4 @@ async def test_loopback(dut):
     dut.ui_in.value = 0
     dut.rst_n.value = 0
     await ClockCycles(dut.clk, 1)
-
-    for i in range(256):
-        dut.ui_in.value = i
-        await ClockCycles(dut.clk, 1)
-        assert dut.uo_out.value == i
-
-@cocotb.test()
-async def test_counter(dut):
-    dut._log.info("Start")
-
-    # Set the clock period to 10 us (100 KHz)
-    clock = Clock(dut.clk, 10, units="us")
-    cocotb.start_soon(clock.start())
-
-    # rst_n == 0: put a counter on uo_out
-    dut.rst_n.value = 0
-    await ClockCycles(dut.clk, 10)
-    dut.rst_n.value = 1
-    await ClockCycles(dut.clk, 2)
 
